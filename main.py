@@ -23,8 +23,8 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
             
         # 1 Draw face landmarks on the frame
         mp_drawing.draw_landmarks(image_bgr, results.face_landmarks, mp_holistic.FACEMESH_TESSELATION,
-                                  mp_drawing.DrawingSpec(color=(80,110,10), thickness=2, circle_radius=4),
-                                  mp_drawing.DrawingSpec(color=(80,256,121), thickness=2, circle_radius=2))
+                                  mp_drawing.DrawingSpec(color=(80,110,10), thickness=2, circle_radius=1),
+                                  mp_drawing.DrawingSpec(color=(80,256,121), thickness=2, circle_radius=1))
         
         # 2 Draw Right hand landmark on the frame
         mp_drawing.draw_landmarks(image_bgr, results.left_hand_landmarks, mp_holistic.HAND_CONNECTIONS, 
@@ -35,8 +35,8 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
         # 3 Draw Left hand landmark on the frame
         mp_drawing.draw_landmarks(image_bgr, results.right_hand_landmarks, mp_holistic.HAND_CONNECTIONS, 
                                 #   BGR Frmat for the drawingspec color right hand
-                                  mp_drawing.DrawingSpec(color=(0,0,255), thickness=2, circle_radius=4),
-                                  mp_drawing.DrawingSpec(color=(0,0,240), thickness=2, circle_radius=2))
+                                  mp_drawing.DrawingSpec(color=(245,117,66), thickness=2, circle_radius=4),
+                                  mp_drawing.DrawingSpec(color=(245,66,230), thickness=2, circle_radius=2))
        
         # 4 Draw Left hand landmark on the frame
         mp_drawing.draw_landmarks(image_bgr, results.pose_landmarks, mp_holistic.POSE_CONNECTIONS)
